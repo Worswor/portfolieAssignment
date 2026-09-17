@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tailwind UI Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+
+  <!-- Navbar -->
+  <nav class="bg-slate-900 text-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-14 items-center justify-between">
+        <a class="font-semibold tracking-tight" href="../../index.html">Front Page</a>
+
+        <button id="menuBtn" class="md:hidden rounded px-3 py-2 text-sm ring-1 ring-white/20">
+          Menu
+        </button>
+
+        <div id="menu" class="hidden md:flex items-center gap-6">
+          <a class="text-white/90 hover:text-white" href="../../index.html">Home</a>
+          <a class="text-white/90 hover:text-white" href="#">Github</a>
+          <a class="text-white/90 hover:text-white" href="#">About</a>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden pb-4 md:hidden">
+        <div class="flex flex-col gap-2">
+          <a class="rounded px-2 py-1 hover:bg-white/10" href="../../index.html">Home</a>
+          <a class="rounded px-2 py-1 hover:bg-white/10" href="#">Github</a>
+          <a class="rounded px-2 py-1 hover:bg-white/10" href="#">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <!-- Cards -->
+    <div class="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <h1 class="text-xl font-semibold">Dashboard</h1>
+        <p class="text-sm text-slate-600">Navbar + cards + form (Tailwind)</p>
+      </div>
+      <!-- <button class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+        New
+      </button> -->
+    </div>
+
+    <div class="grid gap-3 md:grid-cols-2 mb-6"> <!-- grid-cols-2 for correct layout -->
+      <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-start justify-between">
+          <p class="text-sm font-medium text-slate-600">Name:</p>
+        </div>
+        <p class="mt-2 text-3xl font-semibold">Lucas Valls-Sjøstrand</p>
+      </div>
+
+      <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-black/5">
+        <div class="flex items-start justify-between">
+          <p class="text-sm font-medium text-slate-600">Top-up uddannelse</p>
+          <span class="rounded-full bg-sky-50 px-2 py-1 text-xs font-medium text-sky-700">2. semester</span>
+        </div>
+        <p class="mt-2 text-3xl font-semibold">Webudvikling</p>
+        <p class="mt-1 text-xs text-slate-500">DEV</p>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="rounded-xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+      <h2 class="text-base font-semibold">Contact form</h2>
+      <form class="mt-4 grid gap-4">
+        <div class="grid gap-4 md:grid-cols-2">
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Hobbies:</label>
+            <p>- Tabletop wargaming (Warhammer 40K)</p>
+            <p>- Video games</p>
+            <p>- Reading</p>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">idk</label>
+            <input type="email"
+                   class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+                   placeholder="Placeholder" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700">40K hære jeg spiller:</label>
+          <img src="../assets/NecronIcon.jpg" alt="Necron Icon" class="mt-2 h-20 w-20 rounded-lg object-cover" style="width: 50; height: 50;" />
+        </div>
+
+        <div class="flex gap-2">
+          <button type="submit" class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+            Send
+          </button>
+          <a href="../../index.html" class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50">
+            Back
+          </a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // Simple mobile menu toggle (Tailwind doesn't include JS)
+    const btn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (btn && mobileMenu) {
+      btn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
