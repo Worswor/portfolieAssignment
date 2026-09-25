@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background: #0f172a;
+  background: #4A1F1F;
   color: white;
   padding: 18px 16px;
 }
@@ -29,6 +29,20 @@ main {
   margin: 0 auto;
   padding: 24px 16px 48px;
 }
+
+footer {
+  margin-top: 22px;
+  padding: 18px 16px;
+  font-size: 12px;
+  color: white;
+  background-color: #4A1F1F;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
 
 .grid {
   display: grid;
@@ -72,19 +86,13 @@ a.btn {
 }
 
 a.btn.primary {
-  background: #0f172a;
+  background: #4A1F1F;
   color: white;
 }
 
 a.btn.secondary {
   background: #e2e8f0;
   color: #0f172a;
-}
-
-footer {
-  margin-top: 22px;
-  font-size: 12px;
-  color: #64748b;
 }
 
 code {

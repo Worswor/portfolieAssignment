@@ -8,8 +8,8 @@
 </head>
 <body class="has-background-light">
 
-  <!-- Navbar -->
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <!-- Header/Navigation -->
+  <nav class="navbar portfolio-navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item has-text-weight-semibold" href="../../index.html">Front Page</a>
 
@@ -138,6 +138,13 @@
     </div>
   </main>
 
+  <!-- Footer -->
+  <footer class="footer portfolio-footer">
+    <div class="content has-text-centered">
+      <p>Lucas Valls-Sjøstrand 2026</p>
+    </div>
+  </footer>
+
   <script>
     // Bulma navbar burger toggle (Bulma has no JS by default)
     document.addEventListener('DOMContentLoaded', () => {
@@ -153,3 +160,30 @@
   </script>
 </body>
 </html>
+
+<style>
+  .portfolio-navbar,
+  .portfolio-footer {
+    background-color: #4A1F1F;
+  }
+
+  .portfolio-navbar .navbar-item,
+  .portfolio-navbar .navbar-link {
+    color: white;
+  }
+
+  .portfolio-navbar .navbar-item:hover,
+  .portfolio-navbar .navbar-link:hover {
+    background-color: #351616;
+    color: white;
+  }
+
+  .portfolio-footer {
+    color: white;
+    padding: 1.5rem;
+  }
+
+  .portfolio-footer p {
+    color: white;
+  }
+</style>
