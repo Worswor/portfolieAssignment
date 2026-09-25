@@ -4,15 +4,59 @@
 :root { color-scheme: light; }
 
 html, body {
+  margin: 0;
+  min-height: 100%;
   background: tokens.$bg;
   color: tokens.$text;
   font-family: tokens.$font-sans;
 }
 
-.section {
-  padding-top: 2rem;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+.section {
+  padding-top: 2rem;
+  flex: 1;
+}
+
+// Navbar
 .navbar.is-dark {
-  background: #4A1F1F;
+  background: tokens.$dark-brown-red;
+
+  .navbar-item {
+    color: white;
+
+    &:hover {
+      background-color: tokens.$dark-brown-red-hover;
+      color: white;
+    }
+
+    &.is-active {
+      background-color: tokens.$dark-brown-red-hover;
+      color: white;
+    }
+  }
+
+  .navbar-bruger {
+    color: white;
+
+    &:hover {
+      background-color: tokens.$dark-brown-red-hover;
+    }
+  }
+}
+
+// Footer
+.portfolio-footer {
+  background-color: tokens.$dark-brown-red;
+  color: white;
+  padding: 1.5rem;
+
+  p {
+    color: white;
+    margin: 0;
+  }
 }
